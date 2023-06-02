@@ -1,6 +1,6 @@
 ﻿using Buildwise.BIM;
 using Buildwise.Core;
-using Buildwise.Hovering;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 namespace Buildwise.Interactions
@@ -8,11 +8,10 @@ namespace Buildwise.Interactions
     public class ColorCategoryByNextMaterialInteractionResponse : MonoBehaviour, IInteractionResponse
     {
         [SerializeField] private GameObject _bimMaterialsManagerObject;
-        [SerializeField] private GameObject _hoveringManager;
         [SerializeField] private BIMColorStateVariable _bimColorState;
+        [SerializeField] private GameObjectEvent OnActionApplied;
 
         private IBIMMaterialsManager _bimMaterialsManager;
-        private IHoveringResponse[] _hoveringResponses;
         private HelperFunctions _helper;
         
         private void Start()
@@ -31,20 +30,6 @@ namespace Buildwise.Interactions
                     return;
                 }
             }
-            if (_hoveringManager == null)
-            {
-                Debug.LogError("Missing HoveringManager on ColorCategoryByNextMaterialInteractionResponse");
-                return;
-            }
-            else
-            {
-                _hoveringResponses = _hoveringManager.GetComponents<IHoveringResponse>();
-                if (_hoveringResponses == null)
-                {
-                    Debug.LogError("Missing IHoveringResponse Component on the HoveringManager");
-                    return;
-                }
-            }
             
             _helper = new HelperFunctions();
         }
@@ -57,10 +42,7 @@ namespace Buildwise.Interactions
             int index = _helper.GetMaterialIndex(selection, hit);
             if (selection.TryGetComponent(out BIMObjectMaterialHandler bo))
             {
-                foreach (var hoveringResponse in _hoveringResponses)
-                {
-                    hoveringResponse.ClearResponse(selection);
-                }
+                OnActionApplied.Raise(selection.gameObject);
                 Material mat = bo.GetNextMaterial(index);
                 BIMCategory bimCategory = bo.GetComponent<IBIMObject>().Category;
                 _bimMaterialsManager.ColorWholeCategoryByNextMaterial(bimCategory, mat);

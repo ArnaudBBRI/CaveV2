@@ -62,5 +62,16 @@ namespace Buildwise.Hovering
             }
             OnHoveringCleared.Raise(go);
         }
+
+        public void ClearAllHoveringResponses(GameObject go)
+        {
+            if (go != null)
+            {
+                foreach (var hoverResponse in GetComponents<IHoveringResponse>())
+                {
+                    hoverResponse.ClearResponse(go.transform);
+                }
+            }
+        }
     }
 }

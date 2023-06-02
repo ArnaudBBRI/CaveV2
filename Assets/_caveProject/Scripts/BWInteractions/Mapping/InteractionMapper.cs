@@ -5,33 +5,33 @@ namespace Buildwise.Interactions
 {
     public class InteractionMapper : MonoBehaviour
     {
-        public IntEvent ActionIntEvent;
+        public IntEvent OnActionInput;
 
         private void Update()
         {
             if (Input.GetButtonDown("Action0")) 
             {
-                ActionIntEvent.Raise(0);
+                OnActionInput.Raise(0);
             }
             else if (Input.GetButtonDown("Action1"))
             {
-                ActionIntEvent.Raise(1);
+                OnActionInput.Raise(1);
             }
             else if (Input.GetButtonDown("Action2"))
             {
-                ActionIntEvent.Raise(2);
+                OnActionInput.Raise(2);
             }
             else if (Input.GetButtonDown("Action3"))
             {
-                ActionIntEvent.Raise(3);
+                OnActionInput.Raise(3);
             }
             else if (Input.GetButtonDown("Action4"))
             {
-                ActionIntEvent.Raise(4);
+                OnActionInput.Raise(4);
             }
             else if (Input.GetButtonDown("Action5"))
             {
-                ActionIntEvent.Raise(5);
+                OnActionInput.Raise(5);
             }
         }
     }
