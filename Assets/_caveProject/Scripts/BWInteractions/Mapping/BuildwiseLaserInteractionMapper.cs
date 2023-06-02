@@ -1,17 +1,17 @@
-﻿/*
+﻿using UnityAtoms.BaseAtoms;
 using UnityEngine;
-using UVRPN.Core;
-using ScriptableObjectArchitecture;
+//using UVRPN.Core;
 
 namespace Buildwise.Interactions
 {
     public class BuildwiseLaserInteractionMapper : MonoBehaviour, IInteractionMapper
     {
-        private InteractionsEnums _currentAction = InteractionsEnums.NoAction;
-        private Coroutine setCurrentAction;
-        private VRPN_Button[] _buttons;
-        public IntGameEvent ActionIntEvent;
-        
+        //private InteractionsEnums _currentAction = InteractionsEnums.NoAction;
+        //private Coroutine setCurrentAction;
+        //private VRPN_Button[] _buttons;
+
+        public IntEvent OnActionInput;
+        /*
         private void Start()
         {
             var flystick = FindObjectOfType<VRPN_Button>().gameObject;
@@ -37,6 +37,11 @@ namespace Buildwise.Interactions
             ActionIntEvent.Raise(buttonIndex);
             // TODO: input manager for all inputs could solve the menu Onclick?
         }
+        */
+
+        public void RaiseAction(int action)
+        {
+            OnActionInput.Raise(action);
+        }
     }
 }
-*/
