@@ -10,7 +10,13 @@ namespace Buildwise.Interactions
         {
             return _currentAction;
         }
-        
+
+        // TODO
+        public void RaiseAction(int action)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void SetCurrentAction(InteractionsEnums interaction)
         {
             _currentAction = interaction;
