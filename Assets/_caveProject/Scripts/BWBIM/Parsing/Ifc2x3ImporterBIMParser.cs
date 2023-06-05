@@ -75,7 +75,7 @@ namespace Buildwise.BIM
             if (go.TryGetComponent(out ifca))
             {
                 BIMObject bo;
-                if (go.TryGetComponent(out bo)) ;
+                if (go.TryGetComponent(out bo));
                 else bo = go.AddComponent<BIMObject>(); //TODO: replace by interface
                 if (!go.TryGetComponent(out IBIMObjectMaterialHandler bimObjectMaterialHandler))
                 {
