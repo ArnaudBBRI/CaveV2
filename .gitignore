@@ -80,3 +80,6 @@ crashlytics-build.properties
 
 # Debug Scene
 /[Aa]ssets/Scenes/DebugScene/*
+
+# Assets
+/[Aa]ssets/Loft Office/*
