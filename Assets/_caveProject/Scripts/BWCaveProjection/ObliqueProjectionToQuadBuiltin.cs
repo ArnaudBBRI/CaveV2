@@ -27,36 +27,42 @@ public class ObliqueProjectionToQuadBuiltin : MonoBehaviour
 
     private Camera cameraComponent;
 
+    Vector3 pa; // lower left corner in world coordinates
+    Vector3 pb; // lower right corner
+    Vector3 pc; // upper left corner
+    Vector3 pe; // eye position
+    Vector3 va; // from pe to pa
+    Vector3 vb; // from pe to pb
+    Vector3 vc; // from pe to pc
+    Vector3 vr; // right axis of screen
+    Vector3 vu; // up axis of screen
+    Vector3 vn; // normal vector of screen
+
+    private void Start()
+    {
+        cameraComponent= GetComponent<Camera>();
+    }
+
     void Update()
     {
-        cameraComponent = GetComponent<Camera>();
+        //cameraComponent = GetComponent<Camera>();
         if (null != projectionScreen && null != cameraComponent)
         {
-            Vector3 pa =
-                projectionScreen.transform.TransformPoint(
+            pa = projectionScreen.transform.TransformPoint(
                     new Vector3(-0.5f, -0.5f, 0.0f));
             // lower left corner in world coordinates
-            Vector3 pb =
-                projectionScreen.transform.TransformPoint(
+            pb = projectionScreen.transform.TransformPoint(
                     new Vector3(0.5f, -0.5f, 0.0f));
             // lower right corner
-            Vector3 pc =
-                projectionScreen.transform.TransformPoint(
+            pc = projectionScreen.transform.TransformPoint(
                     new Vector3(-0.5f, 0.5f, 0.0f));
             // upper left corner
-            Vector3 pe = transform.position;
+            pe = transform.position;
             // eye position
             float n = cameraComponent.nearClipPlane;
             // distance of near clipping plane
             float f = cameraComponent.farClipPlane;
             // distance of far clipping plane
-
-            Vector3 va; // from pe to pa
-            Vector3 vb; // from pe to pb
-            Vector3 vc; // from pe to pc
-            Vector3 vr; // right axis of screen
-            Vector3 vu; // up axis of screen
-            Vector3 vn; // normal vector of screen
 
             float l; // distance to left screen edge
             float r; // distance to right screen edge

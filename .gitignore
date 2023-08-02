@@ -73,3 +73,10 @@ crashlytics-build.properties
 
 # Substance Materials
 /[Aa]ssets/_caveProject/Resources/Materials/Substance/*
+
+# IFC files
+/[Aa]ssets/IfcImporter/Resources/*
+/[Aa]ssets/*/*.ifc*
+
+# Debug Scene
+/[Aa]ssets/Scenes/DebugScene/*

@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class ActivateAllDisplays : MonoBehaviour
 {
@@ -13,10 +12,5 @@ public class ActivateAllDisplays : MonoBehaviour
         {
             Display.displays[i].Activate();
         }
-    }
-
-    void Update()
-    {
-
     }
 }

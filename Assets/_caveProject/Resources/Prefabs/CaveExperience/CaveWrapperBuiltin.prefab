@@ -84,7 +84,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552050271635733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2648ecd445dec824e82476d7b92f1454, type: 3}
+  m_Script: {fileID: 11500000, guid: cbba098a959d19545a7799ffaaf371e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectionScreen: {fileID: 1429552050547994574}
@@ -152,10 +152,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552050460188463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2233f4e6079edb741a12aed68849deb6, type: 3}
+  m_Script: {fileID: 11500000, guid: a36ca28b76f9a9b4da8db67c31cca7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   flystick: {fileID: 8077651509766618781}
+  moveSpeed: 3
+  rotationSpeed: 20
 --- !u!114 &1911506484844193568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552050460188463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc04234c95db644387779fa70468f00, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f71436cfa2efb4cb1106ad670d4710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1429552050547994574
@@ -444,7 +446,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552050731932733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2648ecd445dec824e82476d7b92f1454, type: 3}
+  m_Script: {fileID: 11500000, guid: cbba098a959d19545a7799ffaaf371e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectionScreen: {fileID: 1429552050547994574}
@@ -663,7 +665,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552051350503072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2648ecd445dec824e82476d7b92f1454, type: 3}
+  m_Script: {fileID: 11500000, guid: cbba098a959d19545a7799ffaaf371e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectionScreen: {fileID: 1429552051048268305}
@@ -829,7 +831,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552051847214963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2648ecd445dec824e82476d7b92f1454, type: 3}
+  m_Script: {fileID: 11500000, guid: cbba098a959d19545a7799ffaaf371e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectionScreen: {fileID: 1429552050563923348}
@@ -1016,7 +1018,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552052252807568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2648ecd445dec824e82476d7b92f1454, type: 3}
+  m_Script: {fileID: 11500000, guid: cbba098a959d19545a7799ffaaf371e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectionScreen: {fileID: 1429552051048268305}
@@ -1141,7 +1143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429552052393867949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2648ecd445dec824e82476d7b92f1454, type: 3}
+  m_Script: {fileID: 11500000, guid: cbba098a959d19545a7799ffaaf371e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectionScreen: {fileID: 1429552050563923348}
