@@ -40,6 +40,7 @@ namespace Buildwise.Materials
 
         public void ApplyMaterialOnSubmesh(int subMeshIndex, Material mat)
         {
+            Debug.Log("Applying material on submesh " + subMeshIndex + " of " + gameObject.name);
             if (!TryGetComponent(out Renderer r)) return;
 
             Material[] currentMats = GetComponent<Renderer>().sharedMaterials;
