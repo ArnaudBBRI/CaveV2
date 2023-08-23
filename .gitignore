@@ -84,3 +84,4 @@ crashlytics-build.properties
 
 # Assets
 /[Aa]ssets/Loft Office/*
+/[Aa]ssets/_caveProject/Resources/Prefabs/Furniture/*
